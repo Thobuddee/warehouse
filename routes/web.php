@@ -16,8 +16,10 @@ Route::get('/', function () {
     //return view('welcome');
     return redirect('/login');
 });
-Route::resource('/warehouse','WarehouseController');
+Route::resource('/delivery','deliveryController');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/members','MemberController');
