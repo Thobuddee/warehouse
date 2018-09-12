@@ -12,14 +12,10 @@
 */
 
 Route::get('/', function () {
-    //Redirece ไปยังหน้า login
     //return view('welcome');
     return redirect('/login');
 });
-Route::resource('/delivery','deliveryController');
-
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/members','MemberController');
