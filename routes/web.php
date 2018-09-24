@@ -13,9 +13,13 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    return redirect('/login');
+    return redirect('login');
 });
-
+Route::get('admin', 'myhomeController@myHome');
+Route::get('user', 'myhomeController@myUsers');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::resource('/packmate','packmateController');
+Route::resource('/rawmate','rawmatrialController');
